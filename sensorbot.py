@@ -7,9 +7,11 @@ import csv
 import telepot
 from telepot.loop import MessageLoop
 
+address_string = insert
+
 #BOT CONFIG
-bot = telepot.Bot("671265451:AAFVeF3_IW7jIN4pWa5es_jMXcYUdy9D6Zs")
-bot.sendMessage(-281354890, 'running...')
+bot = telepot.Bot("bot id")
+bot.sendMessage(address_string, 'running...')
 
 ###########
 
@@ -37,18 +39,18 @@ myFile2 = open('example2.csv','w')
 #MAIN LOOP
 while True:
 	
-	bot.sendMessage(-281354890, 'interação %a' %a)
+	bot.sendMessage(address_string, 'interação %a' %a)
 	#to terminal plot
 	hum1, tem1 = Adafruit_DHT.read_retry(11, 27)
 	hum1lis.append(hum1)
 	tem1lis.append(tem1)
 	print ("S1: Humidity = {} %; Temperature = {} C".format(hum1,tem1))
-	bot.sendMessage(-281354890, 'temperatura 1: %tem1' %tem1)
+	bot.sendMessage(address_string, 'temperatura 1: %tem1' %tem1)
 	hum2, tem2 = Adafruit_DHT.read_retry(11, 22)
 	hum2lis.append(hum2)
 	tem2lis.append(tem2)
 	print ("S2: Humidity = {} %; Temperature = {} C".format(hum2,tem2))
-	bot.sendMessage(-281354890, 'temperatura 2: %tem2' %tem2)
+	bot.sendMessage(address_string, 'temperatura 2: %tem2' %tem2)
 	print("\n")
 	###################
 	
