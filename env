@@ -1,0 +1,5 @@
+HOME=$HOME
+REPO=${HOME}/tempsense
+DOCS=${REPO}/docs
+TOKEN=
+CHAT_ID=
