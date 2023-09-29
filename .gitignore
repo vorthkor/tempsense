@@ -1,0 +1,8 @@
+.env
+*.txt
+*.sh
+__pycache__
+/TODOo.md
+/docs/*.txt
+/docs/phrasescopy
+/docs/photoss
