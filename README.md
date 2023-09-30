@@ -1,4 +1,4 @@
-# Super Bot - with bot
+# Tempsense
 
 A Telegram Bot that controls IOT devices on a Raspberry Pi Zero W and brings API data to the chat.
 
@@ -10,14 +10,14 @@ But now let's go.
 Today it's a bot with multi-functions and programmable to receive more functions. 
 
 
-Materials:
+## Materials:
 
 1. Any Raspberry Pi - I'm using Raspberry Pi Zero W on [headless](https://vorthkor.github.io/victao-blog/learn/2021/12/10/headlessraspi.html)
 2. DHT11 temperature and humidity sensor
 3. BC548 Transistor
 4. 10k Ohms Resistor
 5. 5VDC Relay module - 110/220VCC
-6. Telegram bot API token
+6. Telegram Bot API token
   * Create with `@BotFather` on Telegram and it will give you the bot token
   * Enable inline commands and make the ones you want
 
@@ -60,7 +60,7 @@ I'm leaving the other files to further study, so just ignore them - or don't.
 
 Soon more info.
 
-### AUTOSTART ON BOOT
+## Autostart on boot
 
 - Copy the service file to systemd directory
 ```sh
@@ -97,24 +97,27 @@ Any change on the system, remember to modify it on the service file.
 
 This is the transistor BC548 used to toggle 3v3 to the input of the relay.
 
-![Image of Circuit](docs/circuit1.jpg)
+<img src="docs/circuit1.jpg"  width="300" height="300">
 
+
+---
 ## What's new
 
-### 2023-09-20
+### 2023-09
 
 - Add dot env file - pass the token and chat ID there
 - Add alarms functions
 - Add new temperature function based on time
+- Allow only known IDs
 
-### 2022-06-28
+### 2022-06
 
 - New component -> relay (inside messages module).
 - Now you can control something through a command in Telegram, like a lamp, some system, etc.
 - In the way to do some IOT smart thing whatever.
 
 
-### 2021-11-02
+### 2021-11
 
 - New script with Telegram bot. Interact with a bot to get temperature and humidity values.
 

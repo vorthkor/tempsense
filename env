@@ -3,4 +3,5 @@ REPO=${HOME}/tempsense
 DOCS=${REPO}/docs
 TOKEN=
 CHAT_ID=
+CHAT_ID2=
 ALARM_PASS=
