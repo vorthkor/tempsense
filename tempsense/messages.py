@@ -111,5 +111,5 @@ def dailyOptions():
 
 
 def whoami():
-    msg = "Hi 🙋 I'm cakinho 🐒 a telegram bot 🦾 running in a Raspberry Pi Zero W 💻 somewhere in the world 🌐 Check out my computer temperature through the /temperature command. You can also see my repository on https://github.com/vorthkor/tempsense and check out to news"
+    msg = "I'm cakinho 🐒 a telegram bot 🦾 running in a Raspberry Pi Zero W 💻 somewhere in the world 🌐 Check out my computer temperature through the /temperature command. You can also see my repository on https://github.com/vorthkor/tempsense and check out to news"
     return msg
