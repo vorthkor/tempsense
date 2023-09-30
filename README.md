@@ -27,19 +27,32 @@ Run `pinout` on raspberry's terminal to see which pin to connect - see [map
 of the GPIO](docs/gpio.md) to see the connections.
 
 
-Install pip `sudo apt install python3-pip`
+- Install pip 
+```sh
+sudo apt install python3-pip
+```
 
-Run `pip3 install Adafruit_DHT` - Adafruit's DHT package.
+- Install Adafruit DHT
+```sh
+pip3 install Adafruit_DHT
+```
 
-Run `pip3 install telepot` - Telepot's package.
+- Install Telepot
+```sh
+pip3 install telepot
+```
 
-Run `pip3 install python-dotenv` - Pyhton's dot env package.
+- Install Python dotenv
+```sh
+pip3 install python-dotenv
+```
 
-Using the raspberry pi on headless setup, run `bash -c "python3 tempsense/tempsense/app.py" & disown -ah && exit` on terminal to let the bot running.
+- Copy scripts to raspberry pi home
+```sh
+./tempsense/settg.sh
+```
 
-OR
-
-Run `python3 tempsense/tempsense/app.py`
+- On Raspberry home, run `./start.sh` to begin the application, `./stop.sh` to stop and `./psaux.sh` to check if the application stopped.
 
 Now just chat with the bot or add it on a group or channel. Functions below!
 
@@ -61,7 +74,7 @@ Soon more info.
 - /listagem - Listagem de los comandos disponibles 📜
 - /whoami - 🗣️
 
-## Circuit
+## Electronic schematic
 
 This is the transistor BC548 used to toggle 3v3 to the input of the relay.
 
