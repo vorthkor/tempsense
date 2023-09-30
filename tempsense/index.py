@@ -1,7 +1,7 @@
 import telepot
 import os
 import routes
-from credentials import BOT_TOKEN,CHAT_ID_G,DOCS
+from credentials import BOT_TOKEN,CHAT_ID_G,CHAT_ID_G2,DOCS
 from telepot.loop import MessageLoop
 from datetime import datetime
 
@@ -28,7 +28,7 @@ def handle(msg):
 
     print(content_type, chat_type, chat_id)
 
-    if content_type != 'text':
+    if content_type != 'text' or chat_id != CHAT_ID_G or chat_id != CHAT_ID_G2:
         return
     
     command = msg['text']
