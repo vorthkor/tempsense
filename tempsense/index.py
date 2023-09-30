@@ -12,6 +12,7 @@ chat_id_g = CHAT_ID_G
 chat_id_g2 = CHAT_ID_G2
 chat_id_gg = int(chat_id_g)
 chat_id_gg2 = int(chat_id_g2)
+ids = [chat_id_gg, chat_id_gg2]
 firstM = False
 lastM = False
 botName = bot.getMe()['first_name']
@@ -33,9 +34,7 @@ def handle(msg):
 
     if content_type != 'text':
         return
-    elif chat_id != chat_id_gg:
-        return
-    elif chat_id != chat_id_gg2:
+    elif chat_id not in ids:
         return
     
     command = msg['text']
