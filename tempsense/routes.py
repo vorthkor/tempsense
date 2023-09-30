@@ -22,15 +22,15 @@ def routes(route):
     elif route in ('/dailyinfo'):
         answ = messages.dailyOptions()
     elif route in ('/astronomydaily'):
-        externalapi.lastAstro(1)
-        answ = 404
+        answ = externalapi.lastAstro(1)
     elif route in ('/marsdaily'):
-        externalapi.lastMars(1)
-        answ = 404
+        answ = externalapi.lastMars(1)
     elif route in('/listagem'):
         answ = messages.whichCommands()
     elif route in('/whoami'):
         answ = messages.whoami()
+    elif route in('/update'):
+        pass
     else:
         answ = controller.otherControls(route)
 

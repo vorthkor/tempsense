@@ -89,6 +89,7 @@ def lastMars(opt):
             res = requests.get(photo)
             with open("photo.png", mode="wb") as f:
                 f.write(res.content)
+            return 404
         else:
             date = response.json()["latest_photos"][1]["earth_date"]
             rover = response.json()["latest_photos"][1]["rover"]["name"]
@@ -108,6 +109,7 @@ def lastAstro(opt):
             res = requests.get(photo)
             with open("photo.png", mode="wb") as f:
                 f.write(res.content)
+            return 404
         else:
             phrs = response.json()["explanation"]
             date = response.json()["date"]
