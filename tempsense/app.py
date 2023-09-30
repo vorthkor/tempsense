@@ -1,6 +1,6 @@
 import time
 import messages
-import thebot
+import index
 
 
 # INITIAL MESSAGE
@@ -9,7 +9,7 @@ messages.startMessage()
 
 # MAIN
 def main():
-    thebot.masterbot()
+    index.masterbot()
     while True:
         time.sleep(10)
 
@@ -17,5 +17,5 @@ def main():
 try:
     main()
 except KeyboardInterrupt:
-    thebot.lastMessage()
+    index.lastMessage()
     print('\nOff\n')

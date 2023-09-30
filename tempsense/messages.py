@@ -1,6 +1,3 @@
-import random
-import lights
-import alarms
 import os
 
 
@@ -18,92 +15,101 @@ def startMessage():
                     """)
 
 
-def jokeQuestions():
-    msgJoke = ['Pq a galinha atravessou a rua?', 'Qual o cumulo do absurdo?',
-               'toc toc...', 'qual o numero do pi?', 'mais vale um passaro na mao...']
-    msg = random.choice(msgJoke)
-    return msg
-
-
-def jokeAnswers():
-    msgJoke = ['...Tambem nao sei kkkkkkk', 'para chegar ao outro lado ;p',
-               '...do que dois passaros voando', 'pizza eh bom demais',
-               'meia noite te conto', '3.141592653589794334']
-    msg = random.choice(msgJoke)
-    return msg
-
-
-def botGreeting():
-    msgGrt = ['Salve salve galerinha', 'sou eu o Kelvinho',
-              'nao sei dar grau kkkkk', 'como voce ta se sentindo??',
-              'essas molecula tao agitada em kkkk', 'peeeeei', 'bom trabalho bot']
-    msg = random.choice(msgGrt)
-    return msg
-
-
-def tempAnswers(var):
+def tempAnswers(var, temp, hum):
     if var == 1:
-        return 'Friacaaaaa!!! 🥶 '
+        return 'Cold as ice!!! 🥶 ' 
     elif var == 2:
-        return 'Que inferno de calooor 🥵'
-    else:
-        return 'ta tranquilo ta favoravel 🤙'
+        return 'Hell of a day 🥵'
+    elif var == 3:
+        return 'Tranquility base 🤙'
+    elif var == 4:
+        return 'Please try again! ⚠️ '
+    elif var == 5:
+        return f'The temperature is {temp} degrees Celsius 🌡 \n The air humidity is {hum} % 💦'
+    elif var == 6:
+        return f'The temperature is {temp} degrees Celsius 🌡 \n The time now is {hum} 🕤'
+    elif var == 7:
+        return f'The CPU temperature is {temp} degrees Celsius 🌡 \n The time now is {hum} 🕤'
 
 
 def botLight(aux):
     if aux == 1:
-        lights.lightsOn()
-        msg = 'Acendendo luz'
+        msg = 'Allumage de la lampe 💡'
     elif aux == 2:
-        lights.lightsOff()
-        msg = 'Apagando luz'
+        msg = 'Éteindre la lampe 🌚'
     return msg
 
 
 def botLed(aux):
     if aux == 1:
-        lights.ledOn()
-        msg = 'Acendendo led'
+        msg = 'Illuminazione del LED 🕯️'
     else:
-        lights.ledOff()
-        msg = 'Apagando led'
+        msg = 'Spegnimento del LED 🕯'
     return msg
 
 
 def botAlarm(aux):
     if aux == 1:
-        alarms.alarmOn()
-        msg = 'Liga alarme'
+        msg = 'Liga alarme 🔊'
     elif aux == 2:
-        alarms.alarmOff()
-        msg = 'Desliga alarme'
+        msg = 'Desliga alarme 🔇'
     elif aux == 3:
-        alarms.alarmMicrowaveLed()
-        msg = 'Alarme microwave led'
+        msg = 'Alarme microwave led 🪔'
     else:
-        alarms.alarmMicrowaveBuzzer()
-        msg = 'Alarme microwave buzzer'
+        msg = 'Alarme microwave buzzer 🔔⏰'
     return msg
 
 
 def notFound():
-    msg = "404 command not found!"
+    msg = "404 command not found! 🚫"
     return msg
 
 
 def whichCommands():
     msg = '''
-/temperatura - verifica temperatura no sensor
-/piada - conta piadinha
-/salve - opa
-/luz1 - liga luz
-/luz2 - apaga luz
-/led1 - liga led
-/led2 - apaga led
-/alarm1 - liga alarme
-/alarm2 - desliga alarme
-/alarm3 - alarme mw led
-/alarm4 - alarme mw buzzer
-/commands - lista os comandos
+/temperature - Verifies the room's temperature 🌡
+/lumiere - Allumer la lampe 💡
+/led - Accendere il LED 🔦
+/naozhong - Dǎkāi nàozhōng ⏰
+/fala - Conversas aletórias 🗣️
+/miseru - 写真を見せる 📸
+/dailyinfo - Info about the mars or astronomy picture of the day 📝
+/astronomydaily - The astronomy picture of the day 🔭
+/marsdaily - The latest mars picture 🚀
+/listagem - Listagem de los comandos disponibles 📜
+/whoami - 🗣️
     '''
+    return msg
+
+
+def tempOptions():
+    msg = '''
+        Please choose an option number 🔢: 
+        1 - Room temperature 🛌
+        2 - Raspberry Pi's CPU temperature 🖥️
+        '''
+    return msg
+
+
+def naozhongOptions():
+    msg = '''
+        Please choose an option number 🔢: 
+        1 - Buzzer on 🔊
+        2 - Buzzer off 🔇
+        3 - Blink LED 🪔
+        4 - Microwave 🔔⏰
+        '''
+    return msg
+
+def dailyOptions():
+    msg = '''
+        Please choose an option number 🔢: 
+        1 - Astronomy picture of day info 🔭
+        2 - Last mars picture info 🚀
+        '''
+    return msg
+
+
+def whoami():
+    msg = "Hi 🙋 I'm cakinho 🐒 a telegram bot 🦾 running in a Raspberry Pi Zero W 💻 somewhere in the world 🌐 Check out my computer temperature through the /temperature command. You can also see my repository on https://github.com/vorthkor/tempsense and check out to news"
     return msg
