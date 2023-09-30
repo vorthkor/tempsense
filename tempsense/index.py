@@ -25,7 +25,7 @@ def checkSize(file):
         os.system(f'echo "cleared" > {DOCS}/{file}.txt')
 
 def theMessage(chtid,mss,name):
-    bot.sendMessage(chtid, f'{talk.greetings()}, {name}! 🙋\n {mss}')
+    bot.sendMessage(chtid, f'{talk.greetings()}, {name}! {talk.emojios()} \n {mss}')
 
 
 def handle(msg):
