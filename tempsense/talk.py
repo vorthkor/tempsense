@@ -32,3 +32,16 @@ def talkPhrases():
         msg = talk
     
     return msg
+
+def greetings():
+    with open(f'{DOCS}/greetings', 'r') as f:
+        phrs = f.readlines()
+    f.close()
+    
+    last = len(phrs) - 1
+    rnd = random.randint(0,last)
+    talk = phrs[rnd]
+
+    msg = talk
+    
+    return msg

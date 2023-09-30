@@ -1,6 +1,7 @@
 import telepot
 import os
 import routes
+import talk
 from credentials import BOT_TOKEN,CHAT_ID_G,CHAT_ID_G2,DOCS
 from telepot.loop import MessageLoop
 from datetime import datetime
@@ -24,7 +25,7 @@ def checkSize(file):
         os.system(f'echo "cleared" > {DOCS}/{file}.txt')
 
 def theMessage(chtid,mss,name):
-    bot.sendMessage(chtid, f'Hi, {name}! 🙋\n {mss}')
+    bot.sendMessage(chtid, f'{talk.greetings()}, {name}! 🙋\n {mss}')
 
 
 def handle(msg):
