@@ -1,0 +1,23 @@
+[Unit]
+
+Description=My Service
+
+After=network-online.target
+
+[Service]
+
+ExecStart=/usr/bin/python3 -u app.py
+
+WorkingDirectory=/home/pi/tempsense/tempsense
+
+StandardOutput=inherit
+
+StandardError=inherit
+
+Restart=always
+
+User=pi
+
+[Install]
+
+WantedBy=multi-user.target

@@ -60,6 +60,25 @@ I'm leaving the other files to further study, so just ignore them - or don't.
 
 Soon more info.
 
+### AUTOSTART ON BOOT
+
+- Copy the service file to systemd directory
+```sh
+sudo cp tempsense.service /etc/systemd/system/
+```
+
+- Test to see if the script runs (you can stop it too)
+```sh
+sudo systemctl start tempsense.service
+```
+
+- Enable the autostart on boot
+```sh
+sudo systemctl enable tempsense.service
+```
+
+Any change on the system, remember to modify it on the service file.
+
 ## Bot commands 
 
 - /temperature - Verifies the room's temperature 🌡
@@ -112,6 +131,7 @@ This is the transistor BC548 used to toggle 3v3 to the input of the relay.
 - [Telepot documentation][td]
 - [File manager with python][pl]
 - [Dot env documentation][dd]
+- [Autostart on boot][as]
 
 * * *
 
@@ -128,3 +148,4 @@ This is the transistor BC548 used to toggle 3v3 to the input of the relay.
   [td]: https://telepot.readthedocs.io/en/latest/
   [pl]: https://docs.python.org/3/tutorial/inputoutput.html
   [dd]: https://saurabh-kumar.com/python-dotenv/
+  [as]: https://www.wikihow.com/Execute-a-Script-at-Startup-on-the-Raspberry-Pi
