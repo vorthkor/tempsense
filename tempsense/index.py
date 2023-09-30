@@ -10,8 +10,8 @@ from datetime import datetime
 bot = telepot.Bot(BOT_TOKEN)
 chat_id_g = CHAT_ID_G
 chat_id_g2 = CHAT_ID_G2
-chat_id_gg = int(CHAT_ID_G)
-chat_id_gg2 = int(CHAT_ID_G2)
+chat_id_gg = int(chat_id_g)
+chat_id_gg2 = int(chat_id_g2)
 firstM = False
 lastM = False
 botName = bot.getMe()['first_name']
@@ -31,7 +31,11 @@ def handle(msg):
 
     print(content_type, chat_type, chat_id)
 
-    if content_type != 'text' or chat_id != chat_id_gg or chat_id != chat_id_gg2:
+    if content_type != 'text':
+        return
+    elif chat_id != chat_id_gg:
+        return
+    elif chat_id != chat_id_gg2:
         return
     
     command = msg['text']
