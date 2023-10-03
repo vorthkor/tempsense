@@ -36,8 +36,8 @@ def handle(msg):
     if content_type != 'text':
         return
     
-    if chat_id not in ids:
-        return
+    # if chat_id not in ids:
+    #     return
     
     command = msg['text']
     name = msg['from']['first_name']
