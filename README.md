@@ -93,6 +93,10 @@ Any change on the system, remember to modify it on the service file.
 - /listagem - Listagem de los comandos disponibles 📜
 - /whoami - 🗣️
 
+
+extra:
+/update - updates within repository
+
 ## Electronic schematic
 
 This is the transistor BC548 used to toggle 3v3 to the input of the relay.
@@ -103,21 +107,22 @@ This is the transistor BC548 used to toggle 3v3 to the input of the relay.
 ---
 ## What's new
 
-### 2023-09
+### 2023
 
 - Add dot env file - pass the token and chat ID there
 - Add alarms functions
 - Add new temperature function based on time
 - Allow only known IDs
+- Allow to update through git in outside network
 
-### 2022-06
+### 2022
 
 - New component -> relay (inside messages module).
 - Now you can control something through a command in Telegram, like a lamp, some system, etc.
 - In the way to do some IOT smart thing whatever.
 
 
-### 2021-11
+### 2021
 
 - New script with Telegram bot. Interact with a bot to get temperature and humidity values.
 

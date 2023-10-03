@@ -136,7 +136,7 @@ def meowFacts():
 
     if response.status_code == 200:
         quote = response.json()['data'][0]
-        return f'cat fact 🐱: {quote} 🐈'
+        return f'Cat fact 🐱: {quote} 🐈'
     else:
         return f'Request failed with status code:{response.status_code}'
 
@@ -147,7 +147,7 @@ def spacePeople():
 
     if response.status_code == 200:
         people = response.json()['number']
-        return f'🦸 There are {people} people 🧑‍🚀👨‍🚀👩‍🚀 in the space 🚀 right now 🤯'
+        return f'🦸 There are {people} people 🧑‍🚀👨‍🚀👩‍🚀 in space 🚀 right now 🤯'
     else:
         return f'Request failed with status code:{response.status_code}'
 
@@ -161,7 +161,7 @@ def doBored():
         type = response.json()['type']
         participants = response.json()['participants']
         price = response.json()['price']
-        return f'feeling bored? 🤷 you can {act} 😋, it`s {type} 😱, up to {participants} people 👥 and for the price of {price} moneys 🤑'
+        return f'Feeling bored? 🤷 You can {act} 😋, it`s {type} 😱, up to {participants} people 👥 and for the price of {price} moneys 🤑'
     else:
         return f'Request failed with status code:{response.status_code}'
 
@@ -172,7 +172,7 @@ def corporate():
 
     if response.status_code == 200:
         res = response.json()['phrase']
-        return f'corporate bullshit be like: {res}'
+        return f'Corporate bullshit be like: {res}'
     else:
         return f'Request failed with status code:{response.status_code}'
 
@@ -183,7 +183,7 @@ def rndFacts():
 
     if response.status_code == 200:
         res = response.json()['text']
-        return f'here some useless fact 🧐: {res}'
+        return f'Here some useless fact 🧐: {res}'
     else:
         return f'Request failed with status code:{response.status_code}' 
 
