@@ -2,6 +2,8 @@
 
 touch $HOME/tempsense/docs/temp.txt
 touch $HOME/tempsense/docs/hour.txt
+touch $HOME/tempsense/docs/last.txt
+touch $HOME/tempsense/docs/logh.txt
 sudo chmod -R 777 $HOME/tempsense
 
 mv $HOME/tempsense/scripts/*.sh $HOME

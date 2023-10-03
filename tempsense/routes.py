@@ -30,7 +30,8 @@ def routes(route):
     elif route in('/whoami'):
         answ = messages.whoami()
     elif route in('/update'):
-        pass
+        controller.doUpdate()
+        return 'updating'
     else:
         answ = controller.otherControls(route)
 

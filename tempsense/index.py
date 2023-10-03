@@ -35,7 +35,8 @@ def handle(msg):
 
     if content_type != 'text':
         return
-    elif chat_id not in ids:
+    
+    if chat_id not in ids:
         return
     
     command = msg['text']

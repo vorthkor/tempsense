@@ -2,7 +2,13 @@ import externalapi
 import alarms
 import dht_temperature
 import controller
-from credentials import DOCS,ALARM_PASS
+import subprocess
+from credentials import DOCS,ALARM_PASS,SCRIPTS
+
+
+def doUpdate():
+    subprocess.run([f"{SCRIPTS}/doupdate.sh"],shell=True)
+
 
 def notFound():
     externalapi.notHere()
