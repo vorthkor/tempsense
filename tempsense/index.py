@@ -11,8 +11,8 @@ from datetime import datetime
 bot = telepot.Bot(BOT_TOKEN)
 chat_id_g = CHAT_ID_G
 chat_id_g2 = CHAT_ID_G2
-chat_id_gg = int(chat_id_g)
-chat_id_gg2 = int(chat_id_g2)
+chat_id_gg = int(CHAT_ID_G)
+chat_id_gg2 = int(CHAT_ID_G2)
 ids = [chat_id_gg, chat_id_gg2]
 firstM = False
 lastM = False
@@ -36,8 +36,8 @@ def handle(msg):
     if content_type != 'text':
         return
     
-    # if chat_id not in ids:
-    #     return
+    if chat_id not in ids:
+        return
     
     command = msg['text']
     name = msg['from']['first_name']
@@ -81,7 +81,7 @@ def firstMessage():
     if firstM:
         return
     firstM = True
-    theMessage(chat_id_g, "Hello, World! Bot started! NEWWW update ok! 🟢",botName)
+    theMessage(chat_id_g, "Hello, World! Bot started! newww! 🟢",botName)
     return
 
 
