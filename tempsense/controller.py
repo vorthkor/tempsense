@@ -3,11 +3,11 @@ import alarms
 import dht_temperature
 import controller
 import subprocess
-from credentials import DOCS,ALARM_PASS,SCRIPTS
+from credentials import DOCS,ALARM_PASS,HOME
 
 
 def doUpdate():
-    subprocess.run([f"{SCRIPTS}/doupdate.sh"],shell=True)
+    subprocess.run([f"{HOME}/doupdate.sh"],shell=True)
 
 
 def notFound():

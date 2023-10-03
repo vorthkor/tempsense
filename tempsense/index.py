@@ -81,7 +81,7 @@ def firstMessage():
     if firstM:
         return
     firstM = True
-    theMessage(chat_id_g, "Hello, World! Bot started! update ok! 🟢",botName)
+    theMessage(chat_id_g, "Hello, World! Bot started! NEWWW update ok! 🟢",botName)
     return
 
 
