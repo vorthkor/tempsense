@@ -1,7 +1,6 @@
 import externalapi
 import alarms
 import dht_temperature
-import controller
 import subprocess
 from credentials import DOCS,ALARM_PASS,HOME
 
@@ -46,5 +45,5 @@ def otherControls(route):
             answ = 'invalid! ⛔'
 
     else:
-        answ = controller.notFound()
+        answ = notFound()
     return answ

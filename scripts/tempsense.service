@@ -6,9 +6,9 @@ After=network-online.target
 
 [Service]
 
-ExecStart=/usr/bin/python3 -u app.py
+ExecStart=/usr/bin/bash -u start.sh
 
-WorkingDirectory=/home/pi/tempsense/tempsense
+WorkingDirectory=/home/pi
 
 StandardOutput=inherit
 

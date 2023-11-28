@@ -172,7 +172,7 @@ def corporate():
 
     if response.status_code == 200:
         res = response.json()['phrase']
-        return f'Corporate bullshit be like: {res}'
+        return f'Corporate bullshit be like 🕴️: {res}'
     else:
         return f'Request failed with status code:{response.status_code}'
 
@@ -205,6 +205,6 @@ def mathrivia():
 
     if response.status_code == 200:
         res = response.json()['text']
-        return f'Some random number fact: {res}'
+        return f'Some random number fact #⃣9️⃣: {res}'
     else:
         return f'Request failed with status code:{response.status_code}' 

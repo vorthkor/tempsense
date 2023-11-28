@@ -55,3 +55,12 @@ def emojios():
 
     return msg
     
+
+def hmojis():
+    showPic = ["😳","🥵","😏","🤭","🫢","🤫","🫣","🤤","😈","😻","🫶","👌","🫦","👁","🙈","🌚","🔥"]
+
+    shw = random.choice(showPic)
+
+    msg = shw
+
+    return msg

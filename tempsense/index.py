@@ -34,6 +34,16 @@ def handle(msg):
     print(content_type, chat_type, chat_id)
 
     if content_type != 'text':
+        if content_type == 'photo':
+            print(msg['photo'][0])
+            with open(f'{DOCS}/thephts.txt', 'a') as f:
+                f.write('\n')
+                f.write(msg['photo'][0]['file_id'])
+            f.close()
+            if chat_id == chat_id_gg:
+                bot.sendMessage(chat_id_gg2, f"there's a new photo  👀 try /omg")
+            elif chat_id == chat_id_gg2:
+                bot.sendMessage(chat_id_gg, f"there's a new photo  👀 try /omg")
         return
     
     if chat_id not in ids:
@@ -70,10 +80,24 @@ def handle(msg):
 
     thecommnds = routes.routes(command)
 
-    if thecommnds != 404:
-        theMessage(chat_id,thecommnds,name)
-    else:
+    if thecommnds == 404:
         bot.sendPhoto(chat_id,photo=open('./photo.png', 'rb'))
+    elif thecommnds == 405:
+        with open(f"{DOCS}/thephts.txt", 'r') as f:
+            last_line = f.readlines()[-1]
+        f.close()
+        capt=f'{talk.hmojis()} omg {talk.hmojis()}'
+        bot.sendPhoto(chat_id,last_line, caption=capt)
+        
+    elif thecommnds == 406:
+        with open(f"{DOCS}/thephts.txt") as f:
+            lines = f.readlines()
+            for i in lines:
+                new = i.replace("\n","")
+                bot.sendPhoto(chat_id,new)
+        f.close()
+    else:
+        theMessage(chat_id,thecommnds,name)
 
 
 def firstMessage():

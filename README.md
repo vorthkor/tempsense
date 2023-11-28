@@ -113,7 +113,7 @@ This is the transistor BC548 used to toggle 3v3 to the input of the relay.
 - Add alarms functions
 - Add new temperature function based on time
 - Allow only known IDs
-- Allow to update through git in outside network
+- Allow to update through git in outside network [in progress]
 
 ### 2022
 

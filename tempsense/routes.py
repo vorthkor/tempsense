@@ -7,31 +7,35 @@ import externalapi
 
 
 def routes(route):
-    if route in ('/temperature'):
+    if route == '/temperature':
         answ = messages.tempOptions()
-    elif route in ('/lumiere'):
+    elif route == '/lumiere':
         answ = lights.controlLamp()
-    elif route in('/led'):
+    elif route == '/led':
         answ = lights.controlLed()
-    elif route in('/naozhong'):
+    elif route == '/naozhong':
         answ = messages.naozhongOptions()
-    elif route in ('/fala'):
+    elif route == '/fala':
         answ = talk.talkPhrases()
-    elif route in ('/miseru'):
+    elif route == '/miseru':
         answ = show.showPhotos()
-    elif route in ('/dailyinfo'):
+    elif route == '/dailyinfo':
         answ = messages.dailyOptions()
-    elif route in ('/astronomydaily'):
+    elif route == '/astronomydaily':
         answ = externalapi.lastAstro(1)
-    elif route in ('/marsdaily'):
+    elif route == '/marsdaily':
         answ = externalapi.lastMars(1)
-    elif route in('/listagem'):
+    elif route == '/listagem':
         answ = messages.whichCommands()
-    elif route in('/whoami'):
+    elif route == '/whoami':
         answ = messages.whoami()
-    elif route in('/update'):
+    elif route == '/update':
         controller.doUpdate()
         return 'updating'
+    elif route == '/omg':
+        return 405
+    elif route == '/archive':
+        return 406
     else:
         answ = controller.otherControls(route)
 
