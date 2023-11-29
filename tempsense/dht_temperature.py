@@ -38,10 +38,10 @@ def roomTemp():
         time_last =  datetime.strptime(last_line,"%Y-%m-%d %H:%M:%S.%f\n")
     f.close()
 
-    if tnow - time_last < timedelta(seconds=6):
+    if tnow - time_last < timedelta(seconds=3):
         with open(f'{DOCS}/temp.txt', 'r') as f:
             last_line = f.readlines()[-1]
-            warn = tempWarning(int(last_line))
+            warn = tempWarning(float(last_line))
             msg = f'{messages.tempAnswers(warn,0,0)}\n'
             msgTemp = messages.tempAnswers(6,last_line, tnow)
         f.close()
@@ -78,10 +78,10 @@ def cpuTemp():
         time_last =  datetime.strptime(last_line,"%Y-%m-%d %H:%M:%S.%f\n")
     f.close()
 
-    if tnow - time_last < timedelta(seconds=6):
+    if tnow - time_last < timedelta(seconds=3):
         with open(f'{DOCS}/temp.txt', 'r') as f:
             last_line = f.readlines()[-1]
-            warn = tempWarning(int(last_line))
+            warn = tempWarning(float(last_line))
             msg = f'{messages.tempAnswers(warn,0,0)}\n'
             msgTemp = messages.tempAnswers(6,last_line, tnow)
         f.close()
