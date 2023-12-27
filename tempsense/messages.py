@@ -78,6 +78,7 @@ def whichCommands():
 /marsdaily - The latest mars picture 🚀
 /listagem - Listagem de los comandos disponibles 📜
 /whoami - 🗣️
+/echo - 🗣️🗣️
     '''
     return msg
 
@@ -111,5 +112,10 @@ def dailyOptions():
 
 
 def whoami():
-    msg = "I'm cakinho 🐒 a telegram bot 🦾 running in a Raspberry Pi Zero W 💻 somewhere in the world 🌐 Check out my computer temperature through the /temperature command. You can also see my repository on https://github.com/vorthkor/tempsense and check out to news! \nThis version is from 2023-11-28."
+    msg = "I'm cakinho 🐒 a telegram bot 🦾 running in a Raspberry Pi Zero W 💻 somewhere in the world 🌐 Check out my computer temperature through the /temperature command. You can also see my repository on https://github.com/vorthkor/tempsense and check out to news! \nThis version is from 2023-12-26."
+    return msg
+
+
+def echo():
+    msg = "Say my name"
     return msg

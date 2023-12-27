@@ -109,6 +109,7 @@ This is the transistor BC548 used to toggle 3v3 to the input of the relay.
 
 ### 2023
 
+- Add echo function
 - Add dot env file - pass the token and chat ID there
 - Add alarms functions
 - Add new temperature function based on time

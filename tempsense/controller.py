@@ -44,6 +44,9 @@ def otherControls(route):
         else:
             answ = 'invalid! ⛔'
 
+    elif last_line == '/echo\n':
+        answ = route
+
     else:
         answ = notFound()
     return answ

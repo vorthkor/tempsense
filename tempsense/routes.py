@@ -9,26 +9,28 @@ import externalapi
 def routes(route):
     if route == '/temperature':
         answ = messages.tempOptions()
-    elif route == '/lumiere':
-        answ = lights.controlLamp()
-    elif route == '/led':
-        answ = lights.controlLed()
     elif route == '/naozhong':
         answ = messages.naozhongOptions()
-    elif route == '/fala':
-        answ = talk.talkPhrases()
-    elif route == '/miseru':
-        answ = show.showPhotos()
     elif route == '/dailyinfo':
         answ = messages.dailyOptions()
-    elif route == '/astronomydaily':
-        answ = externalapi.lastAstro(1)
-    elif route == '/marsdaily':
-        answ = externalapi.lastMars(1)
     elif route == '/listagem':
         answ = messages.whichCommands()
     elif route == '/whoami':
         answ = messages.whoami()
+    elif route == '/echo':
+        answ = messages.echo()
+    elif route == '/astronomydaily':
+        answ = externalapi.lastAstro(1)
+    elif route == '/marsdaily':
+        answ = externalapi.lastMars(1)
+    elif route == '/lumiere':
+        answ = lights.controlLamp()
+    elif route == '/led':
+        answ = lights.controlLed()
+    elif route == '/fala':
+        answ = talk.talkPhrases()
+    elif route == '/miseru':
+        answ = show.showPhotos()
     elif route == '/update':
         controller.doUpdate()
         return 'updating'
